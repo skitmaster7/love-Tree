@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('../img2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: sans-serif;
+  color: white;
+  overflow: auto;
+}
+
+a {
+  color: white;
+  font-size: 14px;
+}
+
+#main {
+  width: 100%;
+}
+
+#wrap {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1100px;
+  height: 680px;
+  margin-top: 10px;
+}
+
+#text {
+  position: absolute;
+  width: 90%;
+  max-width: 400px;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#code {
+  display: none;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
+  padding: 25px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideIn 2s ease forwards;
+  color: #fff;
+  font-family: 'Georgia', serif;
+  font-size: 18px;
+  line-height: 28px;
+  text-shadow: 1px 1px 4px #000;
+}
+
+.say {
+  display: block;
+  margin-bottom: 15px;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#clock-box {
+  position: absolute;
+  left: 20px;
+  bottom: 10px;
+  font-size: 24px;
+  display: none;
+}
+
+#canvas {
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  max-width: 1100px;
+  height: auto;
+}
+
+#error {
+  text-align: center;
+  margin-top: 60px;
+  display: none;
+}
+
+#restart-btn {
+  display: none;
+  margin: 30px auto;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: #e91e63;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+}
+
+#restart-btn:hover {
+  background: #c2185b;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #text {
+    top: 60px;
+  }
+
+  #code {
+    font-size: 16px;
+    padding: 20px;
+  }
+
+  #clock-box {
+    font-size: 18px;
+  }
+
+  #restart-btn {
+    width: 80%;
+    font-size: 14px;
+  }
+}
